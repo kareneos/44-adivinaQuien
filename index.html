@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Adivina Quien</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/utilities.css">
+  </head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1>Smash Faces</h1>
+                    <p>Bienvenidas al juego de Smash Faces, tu misión es poder identificar a todas tus compañeras de clase ingresando para ello sus nombres. Tienes 5 oportunidades antes de perder 1 punto y pasar a la siguiente.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--JUEGO-->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                 <!--SEDE-->
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <label for="sel1">Elige tu sede:</label>
+                        <select id="sel1">
+                            <option>México</option>
+                            <option>Perú</option>
+                            <option>Chile</option>
+                        </select>
+                    </div>
+                </div>
+                <!--PUNTOS-->
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <p class="inl">Puntos:</p>
+                    <div id="puntos" class="inl">0</div>
+                </div>
+            </div>
+            <div class="row pd-5 mg-3" id="juego">
+                <!--FOTO-->
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 pd-5">
+                    <img id="foto" class="img-responsive">
+                </div>
+                <!--NOMBRE-->
+                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                   <!--Input-->
+                    <div class="name-group">
+                        <label for="usr">Ingresa su nombre:</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                    <!--boton-->
+                    <button type="button" class="btn btn-default mt-3">Comprobar</button>
+                    <!--mensaje-->
+                    <div id="mensaje" class="text-center pt-10">¡Excelente acertaste!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--JS/JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script> 
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

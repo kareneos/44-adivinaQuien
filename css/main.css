@@ -1,0 +1,11 @@
+/*SECTIONS*/
+h1{
+    border-bottom: .05em solid gray;
+}
+#juego {
+	border: .05em solid black;
+    border-radius: 4%;
+}
+#mensaje {
+	display: none;
+}
