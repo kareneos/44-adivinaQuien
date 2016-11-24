@@ -23,22 +23,37 @@ $(document).ready(function(){
     alumna5["nombre"]="karen";
     alumna5["foto"]="img/Karen.jpg";
     alumnas.push (alumna5);
+    
     //foto aleatoria
     var alumnaAleatoria = numAleatorio();
     function numAleatorio() {
-        return Math.floor((Math.random() * 5) + 0);
+        return Math.floor((Math.random() * 5) + 0);        
     }
     //agregar foto al img
     $('#foto').attr('src', alumnas[alumnaAleatoria]["foto"]);
+    //contador de errores
+    var i = 0;
     //nombre
     $(".btn").click(function(){
          var nombre = $('#nombre').val().trim().toLowerCase();
         if(nombre == alumnas[alumnaAleatoria]["nombre"]){
             var sumaPuntos = count+=5;
             $("#puntos").html(count);
-            $("#mensaje").fadeIn().delay(2000).fadeOut();
+            $("#mensaje").html("¡Excelente acertaste!");
+            $("#nombre").val("");
+            alumnaAleatoria = numAleatorio();
+            $('#foto').attr('src', alumnas[alumnaAleatoria]["foto"]);
         }else{
-            alert("j");
+            i++;
+            if(i == 5){
+                var restaPuntos = count--;
+                $("#puntos").html(count);
+                alumnaAleatoria = numAleatorio();
+                $('#foto').attr('src', alumnas[alumnaAleatoria]["foto"]);
+                i = 0;
+            }
+            $("#mensaje").html("¡Sigue intentando!");
         }
-    }); 
+    });
+                 
 });
